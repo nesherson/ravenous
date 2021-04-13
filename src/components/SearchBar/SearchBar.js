@@ -1,7 +1,7 @@
 import './SearchBar.css';
 import React, { useState } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ searchYelp }) => {
   const [term, setTerm] = useState('');
   const [location, setLocation] = useState('');
   const [sortBy, setSortBy] = useState('best_match');
@@ -16,6 +16,10 @@ const SearchBar = () => {
 
   const handleLocationChange = ({ target }) => {
     setLocation(target.value);
+  };
+
+  const handleSearch = (e) => {
+    searchYelp(term, location, sortBy);
   };
 
   const sortByOptions = {
@@ -66,7 +70,7 @@ const SearchBar = () => {
         />
       </div>
       <div className='SearchBar-submit'>
-        <a>Let's Go</a>
+        <a onClick={handleSearch}>Let's Go</a>
       </div>
     </div>
   );
