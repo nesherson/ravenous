@@ -1,9 +1,12 @@
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
+import SearchBar from '../SearchBar/SearchBar';
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
+      <h1>Ravenous</h1>
+      <SearchBar />
       <BusinessList />
     </div>
   );
