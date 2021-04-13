@@ -1,10 +1,10 @@
 import './App.css';
-import Business from '../Business/Business';
+import BusinessList from '../BusinessList/BusinessList';
 
 const App = () => {
   return (
     <div>
-      <Business />
+      <BusinessList />
     </div>
   );
 };
