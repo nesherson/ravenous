@@ -3,6 +3,7 @@ import React from 'react';
 
 const Business = ({ business }) => {
   const {
+    name,
     imageSrc,
     address,
     city,
@@ -18,7 +19,7 @@ const Business = ({ business }) => {
       <div className='image-container'>
         <img src={imageSrc} alt='' />
       </div>
-      <h2>MarginOtto Pizzeria</h2>
+      <h2>{name}</h2>
       <div className='Business-information'>
         <div className='Business-address'>
           <p>{address}</p>
