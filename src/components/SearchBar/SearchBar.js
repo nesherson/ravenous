@@ -8,6 +8,8 @@ const SearchBar = ({ searchYelp }) => {
 
   const handleSortByChange = (sortByOption) => {
     setSortBy(sortByOption);
+    console.log(sortBy);
+    searchYelp(term, location, sortBy);
   };
 
   const handleTermChange = ({ target }) => {
