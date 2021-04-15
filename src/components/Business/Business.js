@@ -12,12 +12,15 @@ const Business = ({ business }) => {
     category,
     rating,
     reviewCount,
+    url,
   } = business;
 
   return (
     <div className='Business'>
       <div className='image-container'>
-        <img src={imageSrc} alt='' />
+        <a href={url} target='_blank' rel='noopener noreferrer'>
+          <img src={imageSrc} alt='' />
+        </a>
       </div>
       <h2>{name}</h2>
       <div className='Business-information'>
