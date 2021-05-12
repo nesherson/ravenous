@@ -19,11 +19,11 @@ const Business = ({ business }) => {
 
   return (
     <div className='Business'>
-      <div className='image-container'>
-        <a href={url} target='_blank' rel='noopener noreferrer'>
+      <a href={url} target='_blank' rel='noopener noreferrer'>
+        <div className='image-container'>
           <img src={imageSrc} alt='' />
-        </a>
-      </div>
+        </div>
+      </a>
       <h2>{name}</h2>
       <div className='Business-information'>
         <div className='Business-address'>
