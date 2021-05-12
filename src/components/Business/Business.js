@@ -15,6 +15,8 @@ const Business = ({ business }) => {
     url,
   } = business;
 
+  const mapUrl = `http://maps.google.com/?q=${address}`;
+
   return (
     <div className='Business'>
       <div className='image-container'>
@@ -25,7 +27,11 @@ const Business = ({ business }) => {
       <h2>{name}</h2>
       <div className='Business-information'>
         <div className='Business-address'>
-          <p>{address}</p>
+          <p>
+            <a href={mapUrl} target='_blank' rel='noopener noreferrer'>
+              {address}
+            </a>
+          </p>
           <p>{city}</p>
           <p>{`${state} ${zipCode}`}</p>
         </div>

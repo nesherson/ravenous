@@ -4,8 +4,6 @@ import Yelp from '../../util/Yelp.js';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 
-//Yelp.search('Restaurants', 'San Francisco, CA', 'best_match');
-
 const App = () => {
   const [businesses, setBusinesses] = useState([]);
 

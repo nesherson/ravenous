@@ -1,3 +1,5 @@
+import { apiKey } from './api.js';
+
 const Yelp = {
   search: async function (term, location, sortBy) {
     return fetch(
@@ -10,10 +12,9 @@ const Yelp = {
     )
       .then((response) => response.json())
       .then((jsonResponse) => {
+        console.log('jsonResponse --> ', jsonResponse);
         if (jsonResponse.hasOwnProperty('businesses')) {
           const { businesses } = jsonResponse;
-          //console.log(businesses);
-
           return businesses.map((business) => {
             const newObj = {
               id: business.id,
@@ -27,7 +28,6 @@ const Yelp = {
               rating: business.rating,
               reviewCount: business.review_count,
             };
-            console.log(newObj);
             return newObj;
           });
         }
